@@ -23,8 +23,8 @@ This repository serves as a learning playground for exploring backend developmen
 
 ## Getting Started
 
-`javascript`
-```
+
+```javascript
 const http = require('http')
 
 const hostname = '127.0.0.1'
