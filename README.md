@@ -23,6 +23,24 @@ This repository serves as a learning playground for exploring backend developmen
 
 ## Getting Started
 
+'''
+const http = require('http')
+
+const hostname = '127.0.0.1'
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('content-Text', 'text/plain');
+
+    res.end('Server is running..');
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server is running at http://${hostname}:${port}/`);
+});
+'''
+
 If you're also a beginner or interested in learning Node.js and Express.js, feel free to explore the code samples, tutorials, and documentation in this repository. Here's how you can get started:
 
 1. Clone this repository to your local machine.
