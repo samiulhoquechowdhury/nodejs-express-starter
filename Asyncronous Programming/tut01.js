@@ -16,3 +16,18 @@ console.log("Second");
 // Asynchronous code
 setTimeout(() => console.log("Async operation complete"), 1000);
 console.log("Continuing execution...");
+
+/*
+*How do callbacks help handle asynchronous operations in Node.js? Provide a simple example of using a callback to handle asynchronous file I/O.
+Callbacks are functions passed as arguments to asynchronous functions to be executed once the operation is complete. Example:
+
+*/
+const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading file:', err);
+        return;
+    }
+    console.log('File content:', data);
+});
