@@ -23,7 +23,7 @@ This repository serves as a learning playground for exploring backend developmen
 
 ## Getting Started
 
-'''
+```
 const http = require('http')
 
 const hostname = '127.0.0.1'
@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server is running at http://${hostname}:${port}/`);
 });
-'''
+```
 
 If you're also a beginner or interested in learning Node.js and Express.js, feel free to explore the code samples, tutorials, and documentation in this repository. Here's how you can get started:
 
