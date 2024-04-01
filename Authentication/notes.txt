@@ -1,0 +1,4 @@
+Authintiction basically have 2 patterns
+
+1. statefull - which means state or data or server side.
+2.Stateless - which has no state.
