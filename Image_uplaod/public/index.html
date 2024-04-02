@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Photo Upload</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <h1>Upload Your Profile Photo</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profilePhoto" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+    
+    <!-- Display uploaded image -->
+    <h2></h2>
+    <div class="round-image-container">
+        <img id="profileImage" src="" alt="Uploaded Profile Photo">
+    </div>
+    
+    <script>
+        // Update image source when file input changes
+        document.querySelector('input[name="profilePhoto"]').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
