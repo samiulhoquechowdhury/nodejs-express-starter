@@ -14,9 +14,10 @@ io.on('connection', (socket) => {
     console.log("A new user connected", socket.id)
 });
 
-
+//Middleware function
 app.use(express.static(path.resolve('./public')));
 
+//Route
 app.get('/', (req, res) => {
     return res.sendFile("/public/index.html");
 });
