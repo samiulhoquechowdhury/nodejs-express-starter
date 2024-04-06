@@ -6,6 +6,8 @@ import express from "express";
 
 const app = express();
 
+app.use(express.json())
+
 const PORT = process.env.PORT || 3000;
 
 const mockUser = [
@@ -21,6 +23,11 @@ app.get('/', (req, res) => {
 app.get('/api/users', (req, res) => {
     res.send(mockUser);
 });
+
+app.post('/api/users', (req, res) => {
+    console.log(req.body)
+    return res.send(200);
+})
 
 
 //route params
@@ -54,4 +61,4 @@ app.listen(PORT, () => {
 
 //localhost:3000
 //localhost:3000/user
-//localhost:3000/products
+//localhost:3000/products?key=value // this is known as query string
