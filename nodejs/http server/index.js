@@ -1,7 +1,9 @@
 const http = require('http')
+const fs = require('fs')
+
 const PORT = process.env.PORT || 8000;
 const server = http.createServer((req, res) => {
-    console.log("New request received.");
+    console.log(res.getHeaders);
     res.end("Hello from server.");
 });
 
