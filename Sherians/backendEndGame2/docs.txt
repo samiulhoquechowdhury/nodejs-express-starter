@@ -1,0 +1,7 @@
+1.install connect-flash
+2.make sure you put connect flash in app.use function
+3.Kisi bhi route main app ko flash create karna hai
+4.kisi bhi dusre route par app use chakane ka try karein
+
+
+APP CONNECT FLASH KO USE NEHI KAR SAKTE BINA EXPRESS SESSION
